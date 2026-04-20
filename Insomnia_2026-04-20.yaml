@@ -1,0 +1,160 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: API Testing
+meta:
+  id: wrk_7c936f7768154461a72eba24e07eff9d
+  created: 1776628146638
+  modified: 1776703995016
+  description: ""
+collection:
+  - url: https://api.artic.edu/api/v1/agents?limit=100&fields=id,title
+    name: 2a. Artist
+    meta:
+      id: req_5f388ccb2d7b4b09893bea480cb7dbc0
+      created: 1776628146643
+      modified: 1776635526798
+      isPrivate: false
+      description: ""
+      sortKey: -1776628146643
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.5.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://api.artic.edu/api/v1/artworks?page=1&limit=12
+    name: 1. Home Page Preview
+    meta:
+      id: req_5805022a14fd4e04bc9724f733b1bbd0
+      created: 1776628154290
+      modified: 1776633404364
+      isPrivate: false
+      description: ""
+      sortKey: -1776628154290
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.5.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://api.artic.edu/api/v1/artworks?query[range][date_start][gte]=1800&query[range][date_end][lte]=1950)
+    name: 2b. Time Period/Date Range
+    meta:
+      id: req_1d8368db5cb54b45af88342c1c639881
+      created: 1776635559645
+      modified: 1776635598242
+      isPrivate: false
+      description: ""
+      sortKey: -1776635559645
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.5.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://api.artic.edu/api/v1/artworks?query[term][classification_title]=Painting
+    name: 2c. Classification
+    meta:
+      id: req_b3446b9b13be4983ae1897277a869965
+      created: 1776635615548
+      modified: 1776635646169
+      isPrivate: false
+      description: ""
+      sortKey: -1776635615548
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.5.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://api.artic.edu/api/v1/artworks?query[term][is_public_domain]=true
+    name: 2d. Public Domain
+    meta:
+      id: req_41f3affe761e4ecc9c4dc9b4b32cf2e0
+      created: 1776635659065
+      modified: 1776635679375
+      isPrivate: false
+      description: ""
+      sortKey: -1776635659065
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.5.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://api.artic.edu/api/v1/artworks/search?q={user_input}
+    name: 3. Search Bar
+    meta:
+      id: req_cce083e917c24c7ca96e84b2da4eb3d9
+      created: 1776635695951
+      modified: 1776635715384
+      isPrivate: false
+      description: ""
+      sortKey: -1776635695951
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.5.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_11b3ba86a10a9519f603a376d1d48b1b42162711
+    created: 1776628146640
+    modified: 1776628146640
+environments:
+  name: Base Environment
+  meta:
+    id: env_11b3ba86a10a9519f603a376d1d48b1b42162711
+    created: 1776628146640
+    modified: 1776628146640
+    isPrivate: false
